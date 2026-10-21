@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+
+# The Intel Lab dataset is downloaded separately; data.txt exceeds GitHub's
+# regular file-size limit.
+data/real/data.txt
