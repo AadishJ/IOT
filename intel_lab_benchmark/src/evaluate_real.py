@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from real_data import load_intel_data
-from methods import (
+from IntelBerkeley.src.real_data import load_intel_data
+from IntelBerkeley.src.methods import (
     fixed_rate, adaptive_policy, acquired_rows, transmitted_rows
 )
 

@@ -84,9 +84,9 @@ Original dataset page: https://db.csail.mit.edu/labdata/labdata.html
 
 The dataset contains environmental sensor readings collected by distributed sensor motes. The local dataset directory contains:
 
-- `data/real/data.txt` — sensor measurements.
-- `data/real/mote_locs.txt` — mote location information.
-- `data/real/connectivity.txt` — connectivity information.
+- `data/data.txt` — sensor measurements.
+- `data/mote_locs.txt` — mote location information.
+- `data/connectivity.txt` — connectivity information.
 
 The measurement records contain the following fields:
 
@@ -171,7 +171,7 @@ R_{\mathrm{sample}}
 {N_{\mathrm{reference}}}\right)
 \]
 
-### Transmission reduction
+## Transmission reduction
 
 Transmission reduction measures the percentage reduction in transmitted readings relative to the fixed-rate reference:
 
@@ -184,7 +184,7 @@ R_{\mathrm{tx}}
 
 Higher reductions indicate fewer acquisitions or transmissions relative to the reference.
 
-### Freshness compliance
+## Freshness compliance
 
 Freshness is verified using actual transmission indices.
 

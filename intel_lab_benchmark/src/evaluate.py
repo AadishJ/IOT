@@ -14,10 +14,10 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from real_data import load_intel_data
-from methods import fixed_rate, adaptive_policy
-from evaluate_real import score
-from main import combined_v4, verify_freshness
+from IntelBerkeley.src.real_data import load_intel_data
+from IntelBerkeley.src.methods import fixed_rate, adaptive_policy
+from IntelBerkeley.src.evaluate_real import score
+from IntelBerkeley.src.main import combined_v4, verify_freshness
 
 
 def get_policies(df, params):

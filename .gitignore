@@ -9,4 +9,6 @@ venv/
 
 # The Intel Lab dataset is downloaded separately; data.txt exceeds GitHub's
 # regular file-size limit.
-data/real/data.txt
+data/data.txt
+hil_solar_node/.pio
+hil_solar_node/.vscode
