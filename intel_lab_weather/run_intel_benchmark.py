@@ -128,7 +128,7 @@ def parse_args():
     ap.add_argument(
         "--max-stale",
         type=int,
-        help="combined_v4 mandatory spacing in rows, default 120",
+        help="triAS mandatory spacing in rows, default 120",
     )
     return ap.parse_args()
 
@@ -284,7 +284,7 @@ def summarise(df, outdir):
     )
     paired.to_csv(os.path.join(outdir, "paired_vs_fixed.csv"), index=False)
 
-    # how often combined_v4 has lower NRMSE than each other method, window by window
+    # how often triAS has lower NRMSE than each other method, window by window
     pv = pw.pivot_table(
         index=["variable", "mote", "window", "weather"],
         columns="method",
@@ -297,11 +297,11 @@ def summarise(df, outdir):
     )
     wins = []
     for (var, wea), idx in pv.groupby(level=["variable", "weather"]).groups.items():
-        for other in [m for m in S.METHODS if m != "combined_v4"]:
-            a_, b_ = pv.loc[idx, "combined_v4"], pv.loc[idx, other]
+        for other in [m for m in S.METHODS if m != "triAS"]:
+            a_, b_ = pv.loc[idx, "triAS"], pv.loc[idx, other]
             ok = a_.notna() & b_.notna()
             alive = (
-                ok & (up.loc[idx, "combined_v4"] >= 99.5) & (up.loc[idx, other] >= 99.5)
+                ok & (up.loc[idx, "triAS"] >= 99.5) & (up.loc[idx, other] >= 99.5)
             )
             wins.append(
                 {
@@ -359,7 +359,7 @@ def make_figures(pw, summary, outdir, box_weather):
         "fixed_rate": "#7f7f7f",
         "signal_only": "#1f77b4",
         "energy_only": "#ff7f0e",
-        "combined_v4": "#2ca02c",
+        "triAS": "#2ca02c",
     }
     markers = {
         "sunny": "o",

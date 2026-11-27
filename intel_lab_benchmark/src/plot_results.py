@@ -6,12 +6,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from IntelBerkeley.src.real_data import load_intel_data
+from real_data import load_intel_data
 
 ROOT = Path(__file__).resolve().parent.parent
 RESULTS = ROOT / "results"
 FIGURES = RESULTS / "figures"
-DATA_FILE = ROOT / "data" / "real" / "data.txt"
+DATA_FILE = ROOT.parent / "data" / "data.txt"
 METRICS_FILE = RESULTS / "final_metrics.csv"
 
 FIGURES.mkdir(parents=True, exist_ok=True)
@@ -29,7 +29,7 @@ preferred_order = [
     "signal_only",
     "energy_only",
     "combined_v3",
-    "combined_v4",
+    "triAS",
 ]
 methods = [m for m in preferred_order if m in df["method"].unique()]
 df = df[df["method"].isin(methods)].copy()

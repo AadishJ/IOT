@@ -1,4 +1,4 @@
-"""Combined V4: adaptive sensing/transmission with a funded freshness schedule.
+"""triAS: adaptive sensing/transmission with a funded freshness schedule.
 
 * A mandatory-transmission schedule is built explicitly: rows 0, S, 2S, ... and
   the final row n-1 (no duplicates), so consecutive mandatory rows are <= S apart.
@@ -27,7 +27,7 @@ def mandatory_schedule(n, max_stale_rows):
     return np.asarray(rows, dtype=int)
 
 
-def combined_v4(df, initial_energy=100.0, sample_cost=0.02, tx_cost=0.08,
+def triAS(df, initial_energy=100.0, sample_cost=0.02, tx_cost=0.08,
                 horizon=None, min_interval=1, max_interval=30, window=10,
                 tx_frac=0.02, urg_scale=0.2, max_stale_rows=120):
     n = len(df)
@@ -169,7 +169,7 @@ def combined_v4(df, initial_energy=100.0, sample_cost=0.02, tx_cost=0.08,
     out["acquired"] = acquired
     out["transmit"] = transmitted
     out["sampling_interval"] = intervals
-    out["method"] = "combined_v4"
+    out["method"] = "triAS"
     out["energy_budget_remaining"] = budget_trace
     out["mandatory"] = is_mand
     out.attrs["freshness_feasible"] = bool(feasible)

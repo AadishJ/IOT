@@ -8,7 +8,7 @@ day 1 13:10 | sun  89% | battery 4.200 V (100.0%) | temperature 26.1 C | samples
 day 1 13:20 | sun  88% | battery 4.200 V (100.0%) | temperature 26.1 C | samples  127 | sent   56 | node ON
 day 1 13:30 | sun  84% | battery 4.200 V (100.0%) | temperature 26.1 C | samples  128 | sent   56 | node ON
 day 1 13:40 | sun  85% | battery 4.200 V (100.0%) | temperature 26.1 C | samples  128 | sent   56 | node ON
-RUN,sunny,temperature,combined_v4
+RUN,sunny,temperature,triAS
 day 1 00:00 | sun   0% | battery 3.594 V ( 49.5%) | temperature 26.1 C | samples    1 | sent    1 | node ON
 day 1 00:10 | sun   0% | battery 3.593 V ( 49.4%) | temperature 26.1 C | samples    1 | sent    1 | node ON
 day 1 00:20 | sun   0% | battery 3.591 V ( 49.2%) | temperature 26.0 C | samples    2 | sent    1 | node ON
@@ -20,7 +20,7 @@ day 1 01:10 | sun   0% | battery 3.562 V ( 46.8%) | temperature 26.5 C | samples
 day 1 01:20 | sun   0% | battery 3.547 V ( 45.6%) | temperature 26.2 C | samples   12 | sent    6 | node ON
 day 1 01:30 | sun   0% | battery 3.543 V ( 45.3%) | temperature 26.2 C | samples   14 | sent    6 | node ON
 day 1 01:40 | sun   0% | battery 3.535 V ( 44.6%) | temperature 26.1 C | samples   16 | sent    7 | node ON
-RUN,sunny,temperature,combined_v4
+RUN,sunny,temperature,triAS
 TRACE,temperature,0,26.10
 day 1 00:00 | sun   0% | battery 3.594 V ( 49.5%) | temperature 26.1 C | samples    1 | sent    1 | node ON
 TRACE,temperature,1,26.10
@@ -6103,9 +6103,9 @@ RUN,sunny,temperature,energy_only
   Longest time without data reaching the gateway: 100.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,temperature,energy_only,5.492,3.861,959,111,221.24,1144.18,885.90,100.00,0,29.39,77.42,100.0,1
-RUN,sunny,temperature,combined_v4
+RUN,sunny,temperature,triAS
 
-==== RUN FINISHED: weather=sunny | signal=temperature | method=combined_v4 | seed=1 ====
+==== RUN FINISHED: weather=sunny | signal=temperature | method=triAS | seed=1 ====
   Gateway reconstruction error (NRMSE): 3.83 %   (lower is better)
   Samples taken: 446 of 5760    Transmissions: 183
   Energy used by node: 189.0 J   harvested from sun: 1145.0 J   wasted (battery full): 912.2 J
@@ -6113,7 +6113,7 @@ RUN,sunny,temperature,combined_v4
   Battery: lowest 28.4 %    final 82.1 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,temperature,combined_v4,3.831,2.307,446,183,189.02,1145.01,912.23,100.00,0,28.38,82.15,59.5,1
+RESULT,sunny,temperature,triAS,3.831,2.307,446,183,189.02,1145.01,912.23,100.00,0,28.38,82.15,59.5,1
 RUN,sunny_to_cloudy,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=fixed_rate | seed=1 ====
@@ -6147,9 +6147,9 @@ RUN,sunny_to_cloudy,temperature,energy_only
   Longest time without data reaching the gateway: 100.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,temperature,energy_only,5.457,3.827,902,111,213.26,658.69,422.69,100.00,0,29.39,67.15,100.0,1
-RUN,sunny_to_cloudy,temperature,combined_v4
+RUN,sunny_to_cloudy,temperature,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=combined_v4 | seed=1 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=triAS | seed=1 ====
   Gateway reconstruction error (NRMSE): 3.83 %   (lower is better)
   Samples taken: 446 of 5760    Transmissions: 183
   Energy used by node: 189.0 J   harvested from sun: 659.9 J   wasted (battery full): 429.7 J
@@ -6157,7 +6157,7 @@ RUN,sunny_to_cloudy,temperature,combined_v4
   Battery: lowest 28.4 %    final 80.4 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,temperature,combined_v4,3.831,2.307,446,183,189.02,659.91,429.69,100.00,0,28.38,80.36,59.5,1
+RESULT,sunny_to_cloudy,temperature,triAS,3.831,2.307,446,183,189.02,659.91,429.69,100.00,0,28.38,80.36,59.5,1
 RUN,cloudy_to_sunny,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=fixed_rate | seed=1 ====
@@ -6191,9 +6191,9 @@ RUN,cloudy_to_sunny,temperature,energy_only
   Longest time without data reaching the gateway: 100.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,temperature,energy_only,5.334,3.711,738,111,190.30,654.40,427.05,100.00,0,28.45,77.42,100.0,1
-RUN,cloudy_to_sunny,temperature,combined_v4
+RUN,cloudy_to_sunny,temperature,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=combined_v4 | seed=1 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=triAS | seed=1 ====
   Gateway reconstruction error (NRMSE): 3.86 %   (lower is better)
   Samples taken: 429 of 5760    Transmissions: 182
   Energy used by node: 186.1 J   harvested from sun: 649.0 J   wasted (battery full): 419.1 J
@@ -6201,7 +6201,7 @@ RUN,cloudy_to_sunny,temperature,combined_v4
   Battery: lowest 21.8 %    final 82.1 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,temperature,combined_v4,3.862,2.338,429,182,186.09,648.96,419.13,100.00,0,21.84,82.15,59.5,1
+RESULT,cloudy_to_sunny,temperature,triAS,3.862,2.338,429,182,186.09,648.96,419.13,100.00,0,21.84,82.15,59.5,1
 RUN,cloudy,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=temperature | method=fixed_rate | seed=1 ====
@@ -6235,9 +6235,9 @@ RUN,cloudy,temperature,energy_only
   Longest time without data reaching the gateway: 100.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,temperature,energy_only,5.261,3.637,566,111,166.22,168.74,0.00,100.00,0,28.45,52.02,100.0,1
-RUN,cloudy,temperature,combined_v4
+RUN,cloudy,temperature,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=temperature | method=combined_v4 | seed=1 ====
+==== RUN FINISHED: weather=cloudy | signal=temperature | method=triAS | seed=1 ====
   Gateway reconstruction error (NRMSE): 3.72 %   (lower is better)
   Samples taken: 424 of 5760    Transmissions: 184
   Energy used by node: 186.5 J   harvested from sun: 163.8 J   wasted (battery full): 0.0 J
@@ -6245,7 +6245,7 @@ RUN,cloudy,temperature,combined_v4
   Battery: lowest 20.7 %    final 32.1 %
   Longest time without data reaching the gateway: 48.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,temperature,combined_v4,3.720,2.239,424,184,186.49,163.78,0.00,100.00,0,20.74,32.05,48.0,1
+RESULT,cloudy,temperature,triAS,3.720,2.239,424,184,186.49,163.78,0.00,100.00,0,20.74,32.05,48.0,1
 RUN,sunny,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=sunny | signal=temperature | method=fixed_rate | seed=2 ====
@@ -6279,9 +6279,9 @@ RUN,sunny,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,temperature,energy_only,5.478,3.848,959,111,221.24,1149.63,891.36,100.00,0,29.40,77.42,105.0,2
-RUN,sunny,temperature,combined_v4
+RUN,sunny,temperature,triAS
 
-==== RUN FINISHED: weather=sunny | signal=temperature | method=combined_v4 | seed=2 ====
+==== RUN FINISHED: weather=sunny | signal=temperature | method=triAS | seed=2 ====
   Gateway reconstruction error (NRMSE): 3.83 %   (lower is better)
   Samples taken: 446 of 5760    Transmissions: 183
   Energy used by node: 189.0 J   harvested from sun: 1150.5 J   wasted (battery full): 917.7 J
@@ -6289,7 +6289,7 @@ RUN,sunny,temperature,combined_v4
   Battery: lowest 28.4 %    final 82.1 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,temperature,combined_v4,3.831,2.307,446,183,189.02,1150.45,917.68,100.00,0,28.41,82.15,59.5,2
+RESULT,sunny,temperature,triAS,3.831,2.307,446,183,189.02,1150.45,917.68,100.00,0,28.41,82.15,59.5,2
 RUN,sunny_to_cloudy,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=fixed_rate | seed=2 ====
@@ -6323,9 +6323,9 @@ RUN,sunny_to_cloudy,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,temperature,energy_only,5.465,3.837,923,111,216.20,667.12,427.44,100.00,0,29.40,67.69,105.0,2
-RUN,sunny_to_cloudy,temperature,combined_v4
+RUN,sunny_to_cloudy,temperature,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=combined_v4 | seed=2 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=triAS | seed=2 ====
   Gateway reconstruction error (NRMSE): 3.83 %   (lower is better)
   Samples taken: 446 of 5760    Transmissions: 183
   Energy used by node: 189.0 J   harvested from sun: 668.7 J   wasted (battery full): 438.9 J
@@ -6333,7 +6333,7 @@ RUN,sunny_to_cloudy,temperature,combined_v4
   Battery: lowest 28.4 %    final 80.0 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,temperature,combined_v4,3.831,2.307,446,183,189.02,668.68,438.93,100.00,0,28.41,80.03,59.5,2
+RESULT,sunny_to_cloudy,temperature,triAS,3.831,2.307,446,183,189.02,668.68,438.93,100.00,0,28.41,80.03,59.5,2
 RUN,cloudy_to_sunny,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=fixed_rate | seed=2 ====
@@ -6367,9 +6367,9 @@ RUN,cloudy_to_sunny,temperature,energy_only
   Longest time without data reaching the gateway: 100.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,temperature,energy_only,5.392,3.774,822,111,202.06,678.58,439.48,100.00,0,28.63,77.42,100.0,2
-RUN,cloudy_to_sunny,temperature,combined_v4
+RUN,cloudy_to_sunny,temperature,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=combined_v4 | seed=2 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=triAS | seed=2 ====
   Gateway reconstruction error (NRMSE): 3.78 %   (lower is better)
   Samples taken: 442 of 5760    Transmissions: 182
   Energy used by node: 187.9 J   harvested from sun: 676.5 J   wasted (battery full): 444.8 J
@@ -6377,7 +6377,7 @@ RUN,cloudy_to_sunny,temperature,combined_v4
   Battery: lowest 26.9 %    final 82.1 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,temperature,combined_v4,3.776,2.271,442,182,187.91,676.48,444.82,100.00,0,26.94,82.15,59.5,2
+RESULT,cloudy_to_sunny,temperature,triAS,3.776,2.271,442,182,187.91,676.48,444.82,100.00,0,26.94,82.15,59.5,2
 RUN,cloudy,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=temperature | method=fixed_rate | seed=2 ====
@@ -6411,9 +6411,9 @@ RUN,cloudy,temperature,energy_only
   Longest time without data reaching the gateway: 100.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,temperature,energy_only,5.332,3.717,707,111,185.96,195.79,0.00,100.00,0,28.63,57.57,100.0,2
-RUN,cloudy,temperature,combined_v4
+RUN,cloudy,temperature,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=temperature | method=combined_v4 | seed=2 ====
+==== RUN FINISHED: weather=cloudy | signal=temperature | method=triAS | seed=2 ====
   Gateway reconstruction error (NRMSE): 3.77 %   (lower is better)
   Samples taken: 443 of 5760    Transmissions: 182
   Energy used by node: 188.0 J   harvested from sun: 193.4 J   wasted (battery full): 0.0 J
@@ -6421,7 +6421,7 @@ RUN,cloudy,temperature,combined_v4
   Battery: lowest 26.9 %    final 54.2 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,temperature,combined_v4,3.770,2.263,443,182,188.05,193.37,0.00,100.00,0,26.94,54.19,59.5,2
+RESULT,cloudy,temperature,triAS,3.770,2.263,443,182,188.05,193.37,0.00,100.00,0,26.94,54.19,59.5,2
 RUN,sunny,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=sunny | signal=temperature | method=fixed_rate | seed=3 ====
@@ -6455,9 +6455,9 @@ RUN,sunny,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,temperature,energy_only,5.478,3.848,959,111,221.24,1148.88,890.60,100.00,0,29.40,77.42,105.0,3
-RUN,sunny,temperature,combined_v4
+RUN,sunny,temperature,triAS
 
-==== RUN FINISHED: weather=sunny | signal=temperature | method=combined_v4 | seed=3 ====
+==== RUN FINISHED: weather=sunny | signal=temperature | method=triAS | seed=3 ====
   Gateway reconstruction error (NRMSE): 3.83 %   (lower is better)
   Samples taken: 446 of 5760    Transmissions: 183
   Energy used by node: 189.0 J   harvested from sun: 1149.7 J   wasted (battery full): 916.9 J
@@ -6465,7 +6465,7 @@ RUN,sunny,temperature,combined_v4
   Battery: lowest 28.4 %    final 82.1 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,temperature,combined_v4,3.831,2.307,446,183,189.02,1149.71,916.94,100.00,0,28.41,82.15,59.5,3
+RESULT,sunny,temperature,triAS,3.831,2.307,446,183,189.02,1149.71,916.94,100.00,0,28.41,82.15,59.5,3
 RUN,sunny_to_cloudy,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=fixed_rate | seed=3 ====
@@ -6499,9 +6499,9 @@ RUN,sunny_to_cloudy,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,temperature,energy_only,5.460,3.832,928,111,216.90,679.87,429.90,100.00,0,29.40,74.60,105.0,3
-RUN,sunny_to_cloudy,temperature,combined_v4
+RUN,sunny_to_cloudy,temperature,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=combined_v4 | seed=3 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=triAS | seed=3 ====
   Gateway reconstruction error (NRMSE): 3.83 %   (lower is better)
   Samples taken: 446 of 5760    Transmissions: 183
   Energy used by node: 189.0 J   harvested from sun: 681.1 J   wasted (battery full): 450.6 J
@@ -6509,7 +6509,7 @@ RUN,sunny_to_cloudy,temperature,combined_v4
   Battery: lowest 28.4 %    final 80.6 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,temperature,combined_v4,3.831,2.307,446,183,189.02,681.06,450.56,100.00,0,28.41,80.56,59.5,3
+RESULT,sunny_to_cloudy,temperature,triAS,3.831,2.307,446,183,189.02,681.06,450.56,100.00,0,28.41,80.56,59.5,3
 RUN,cloudy_to_sunny,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=fixed_rate | seed=3 ====
@@ -6543,9 +6543,9 @@ RUN,cloudy_to_sunny,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,temperature,energy_only,5.338,3.706,765,111,194.08,663.49,432.36,100.00,0,28.57,77.42,105.0,3
-RUN,cloudy_to_sunny,temperature,combined_v4
+RUN,cloudy_to_sunny,temperature,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=combined_v4 | seed=3 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=triAS | seed=3 ====
   Gateway reconstruction error (NRMSE): 3.84 %   (lower is better)
   Samples taken: 433 of 5760    Transmissions: 184
   Energy used by node: 187.7 J   harvested from sun: 658.7 J   wasted (battery full): 427.3 J
@@ -6553,7 +6553,7 @@ RUN,cloudy_to_sunny,temperature,combined_v4
   Battery: lowest 25.7 %    final 82.1 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,temperature,combined_v4,3.841,2.297,433,184,187.75,658.74,427.26,100.00,0,25.70,82.15,59.5,3
+RESULT,cloudy_to_sunny,temperature,triAS,3.841,2.297,433,184,187.75,658.74,427.26,100.00,0,25.70,82.15,59.5,3
 RUN,cloudy,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=temperature | method=fixed_rate | seed=3 ====
@@ -6587,9 +6587,9 @@ RUN,cloudy,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,temperature,energy_only,5.301,3.660,661,111,179.52,193.25,0.00,100.00,0,28.57,60.49,105.0,3
-RUN,cloudy,temperature,combined_v4
+RUN,cloudy,temperature,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=temperature | method=combined_v4 | seed=3 ====
+==== RUN FINISHED: weather=cloudy | signal=temperature | method=triAS | seed=3 ====
   Gateway reconstruction error (NRMSE): 3.85 %   (lower is better)
   Samples taken: 433 of 5760    Transmissions: 182
   Energy used by node: 186.6 J   harvested from sun: 188.5 J   wasted (battery full): 0.0 J
@@ -6597,7 +6597,7 @@ RUN,cloudy,temperature,combined_v4
   Battery: lowest 23.4 %    final 51.5 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,temperature,combined_v4,3.848,2.312,433,182,186.65,188.46,0.00,100.00,0,23.41,51.51,59.5,3
+RESULT,cloudy,temperature,triAS,3.848,2.312,433,182,186.65,188.46,0.00,100.00,0,23.41,51.51,59.5,3
 RUN,sunny,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=sunny | signal=temperature | method=fixed_rate | seed=4 ====
@@ -6631,9 +6631,9 @@ RUN,sunny,temperature,energy_only
   Longest time without data reaching the gateway: 100.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,temperature,energy_only,5.492,3.861,959,111,221.24,1145.42,887.14,100.00,0,29.39,77.43,100.0,4
-RUN,sunny,temperature,combined_v4
+RUN,sunny,temperature,triAS
 
-==== RUN FINISHED: weather=sunny | signal=temperature | method=combined_v4 | seed=4 ====
+==== RUN FINISHED: weather=sunny | signal=temperature | method=triAS | seed=4 ====
   Gateway reconstruction error (NRMSE): 3.83 %   (lower is better)
   Samples taken: 446 of 5760    Transmissions: 183
   Energy used by node: 189.0 J   harvested from sun: 1146.3 J   wasted (battery full): 913.5 J
@@ -6641,7 +6641,7 @@ RUN,sunny,temperature,combined_v4
   Battery: lowest 28.4 %    final 82.1 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,temperature,combined_v4,3.831,2.307,446,183,189.02,1146.25,913.48,100.00,0,28.39,82.15,59.5,4
+RESULT,sunny,temperature,triAS,3.831,2.307,446,183,189.02,1146.25,913.48,100.00,0,28.39,82.15,59.5,4
 RUN,sunny_to_cloudy,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=fixed_rate | seed=4 ====
@@ -6675,9 +6675,9 @@ RUN,sunny_to_cloudy,temperature,energy_only
   Longest time without data reaching the gateway: 100.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,temperature,energy_only,5.476,3.845,925,111,216.48,679.28,428.12,100.00,0,29.39,75.75,100.0,4
-RUN,sunny_to_cloudy,temperature,combined_v4
+RUN,sunny_to_cloudy,temperature,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=combined_v4 | seed=4 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=triAS | seed=4 ====
   Gateway reconstruction error (NRMSE): 3.83 %   (lower is better)
   Samples taken: 446 of 5760    Transmissions: 183
   Energy used by node: 189.0 J   harvested from sun: 680.3 J   wasted (battery full): 448.7 J
@@ -6685,7 +6685,7 @@ RUN,sunny_to_cloudy,temperature,combined_v4
   Battery: lowest 28.4 %    final 81.4 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,temperature,combined_v4,3.831,2.307,446,183,189.02,680.33,448.67,100.00,0,28.39,81.38,59.5,4
+RESULT,sunny_to_cloudy,temperature,triAS,3.831,2.307,446,183,189.02,680.33,448.67,100.00,0,28.39,81.38,59.5,4
 RUN,cloudy_to_sunny,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=fixed_rate | seed=4 ====
@@ -6719,9 +6719,9 @@ RUN,cloudy_to_sunny,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,temperature,energy_only,5.348,3.722,700,109,183.88,639.50,418.58,100.00,0,24.26,77.43,105.0,4
-RUN,cloudy_to_sunny,temperature,combined_v4
+RUN,cloudy_to_sunny,temperature,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=combined_v4 | seed=4 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=triAS | seed=4 ====
   Gateway reconstruction error (NRMSE): 3.89 %   (lower is better)
   Samples taken: 411 of 5760    Transmissions: 173
   Energy used by node: 178.6 J   harvested from sun: 634.6 J   wasted (battery full): 412.3 J
@@ -6729,7 +6729,7 @@ RUN,cloudy_to_sunny,temperature,combined_v4
   Battery: lowest 14.8 %    final 82.1 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,temperature,combined_v4,3.889,2.364,411,173,178.62,634.61,412.26,100.00,0,14.81,82.15,60.0,4
+RESULT,cloudy_to_sunny,temperature,triAS,3.889,2.364,411,173,178.62,634.61,412.26,100.00,0,14.81,82.15,60.0,4
 RUN,cloudy,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=temperature | method=fixed_rate | seed=4 ====
@@ -6763,9 +6763,9 @@ RUN,cloudy,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,temperature,energy_only,5.257,3.641,555,109,163.58,172.57,0.00,100.00,0,23.45,56.93,105.0,4
-RUN,cloudy,temperature,combined_v4
+RUN,cloudy,temperature,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=temperature | method=combined_v4 | seed=4 ====
+==== RUN FINISHED: weather=cloudy | signal=temperature | method=triAS | seed=4 ====
   Gateway reconstruction error (NRMSE): 3.86 %   (lower is better)
   Samples taken: 399 of 5760    Transmissions: 172
   Energy used by node: 176.4 J   harvested from sun: 167.9 J   wasted (battery full): 0.0 J
@@ -6773,7 +6773,7 @@ RUN,cloudy,temperature,combined_v4
   Battery: lowest 14.3 %    final 43.4 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,temperature,combined_v4,3.861,2.355,399,172,176.39,167.85,0.00,100.00,0,14.25,43.45,60.0,4
+RESULT,cloudy,temperature,triAS,3.861,2.355,399,172,176.39,167.85,0.00,100.00,0,14.25,43.45,60.0,4
 RUN,sunny,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=sunny | signal=temperature | method=fixed_rate | seed=5 ====
@@ -6807,9 +6807,9 @@ RUN,sunny,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,temperature,energy_only,5.478,3.848,959,111,221.24,1143.42,885.15,100.00,0,29.39,77.42,105.0,5
-RUN,sunny,temperature,combined_v4
+RUN,sunny,temperature,triAS
 
-==== RUN FINISHED: weather=sunny | signal=temperature | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=sunny | signal=temperature | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 3.83 %   (lower is better)
   Samples taken: 446 of 5760    Transmissions: 183
   Energy used by node: 189.0 J   harvested from sun: 1144.2 J   wasted (battery full): 911.5 J
@@ -6817,7 +6817,7 @@ RUN,sunny,temperature,combined_v4
   Battery: lowest 28.4 %    final 82.1 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,temperature,combined_v4,3.831,2.307,446,183,189.02,1144.24,911.47,100.00,0,28.37,82.15,59.5,5
+RESULT,sunny,temperature,triAS,3.831,2.307,446,183,189.02,1144.24,911.47,100.00,0,28.37,82.15,59.5,5
 RUN,sunny_to_cloudy,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=fixed_rate | seed=5 ====
@@ -6851,9 +6851,9 @@ RUN,sunny_to_cloudy,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,temperature,energy_only,5.465,3.837,925,111,216.48,661.74,423.10,100.00,0,29.39,66.73,105.0,5
-RUN,sunny_to_cloudy,temperature,combined_v4
+RUN,sunny_to_cloudy,temperature,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 3.83 %   (lower is better)
   Samples taken: 446 of 5760    Transmissions: 183
   Energy used by node: 189.0 J   harvested from sun: 663.5 J   wasted (battery full): 431.9 J
@@ -6861,7 +6861,7 @@ RUN,sunny_to_cloudy,temperature,combined_v4
   Battery: lowest 28.4 %    final 81.3 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,temperature,combined_v4,3.831,2.307,446,183,189.02,663.51,431.90,100.00,0,28.37,81.34,59.5,5
+RESULT,sunny_to_cloudy,temperature,triAS,3.831,2.307,446,183,189.02,663.51,431.90,100.00,0,28.37,81.34,59.5,5
 RUN,cloudy_to_sunny,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=fixed_rate | seed=5 ====
@@ -6895,9 +6895,9 @@ RUN,cloudy_to_sunny,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,temperature,energy_only,5.339,3.704,742,111,190.86,652.58,424.68,100.00,0,27.96,77.42,105.0,5
-RUN,cloudy_to_sunny,temperature,combined_v4
+RUN,cloudy_to_sunny,temperature,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 3.88 %   (lower is better)
   Samples taken: 431 of 5760    Transmissions: 181
   Energy used by node: 185.8 J   harvested from sun: 647.6 J   wasted (battery full): 418.0 J
@@ -6905,7 +6905,7 @@ RUN,cloudy_to_sunny,temperature,combined_v4
   Battery: lowest 21.9 %    final 82.1 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,temperature,combined_v4,3.877,2.360,431,181,185.82,647.56,418.01,100.00,0,21.88,82.15,59.5,5
+RESULT,cloudy_to_sunny,temperature,triAS,3.877,2.360,431,181,185.82,647.56,418.01,100.00,0,21.88,82.15,59.5,5
 RUN,cloudy,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=temperature | method=fixed_rate | seed=5 ====
@@ -6939,9 +6939,9 @@ RUN,cloudy,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,temperature,energy_only,5.287,3.651,575,111,167.48,171.07,0.00,100.00,0,27.96,52.83,105.0,5
-RUN,cloudy,temperature,combined_v4
+RUN,cloudy,temperature,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=temperature | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=cloudy | signal=temperature | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 3.85 %   (lower is better)
   Samples taken: 429 of 5760    Transmissions: 181
   Energy used by node: 185.5 J   harvested from sun: 166.3 J   wasted (battery full): 0.0 J
@@ -6949,7 +6949,7 @@ RUN,cloudy,temperature,combined_v4
   Battery: lowest 21.0 %    final 34.9 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,temperature,combined_v4,3.847,2.326,429,181,185.54,166.33,0.00,100.00,0,20.95,34.91,59.5,5
+RESULT,cloudy,temperature,triAS,3.847,2.326,429,181,185.54,166.33,0.00,100.00,0,20.95,34.91,59.5,5
 SWEEP_DONE
 RUN,sunny,temperature,fixed_rate
 
@@ -6984,9 +6984,9 @@ RUN,sunny,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,temperature,energy_only,5.478,3.848,959,111,221.24,1143.42,885.15,100.00,0,29.39,77.42,105.0,5
-RUN,sunny,temperature,combined_v4
+RUN,sunny,temperature,triAS
 
-==== RUN FINISHED: weather=sunny | signal=temperature | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=sunny | signal=temperature | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 3.83 %   (lower is better)
   Samples taken: 446 of 5760    Transmissions: 183
   Energy used by node: 189.0 J   harvested from sun: 1144.2 J   wasted (battery full): 911.5 J
@@ -6994,7 +6994,7 @@ RUN,sunny,temperature,combined_v4
   Battery: lowest 28.4 %    final 82.1 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,temperature,combined_v4,3.831,2.307,446,183,189.02,1144.24,911.47,100.00,0,28.37,82.15,59.5,5
+RESULT,sunny,temperature,triAS,3.831,2.307,446,183,189.02,1144.24,911.47,100.00,0,28.37,82.15,59.5,5
 RUN,sunny_to_cloudy,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=fixed_rate | seed=5 ====
@@ -7028,9 +7028,9 @@ RUN,sunny_to_cloudy,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,temperature,energy_only,5.465,3.837,925,111,216.48,661.74,423.10,100.00,0,29.39,66.73,105.0,5
-RUN,sunny_to_cloudy,temperature,combined_v4
+RUN,sunny_to_cloudy,temperature,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=temperature | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 3.83 %   (lower is better)
   Samples taken: 446 of 5760    Transmissions: 183
   Energy used by node: 189.0 J   harvested from sun: 663.5 J   wasted (battery full): 431.9 J
@@ -7038,7 +7038,7 @@ RUN,sunny_to_cloudy,temperature,combined_v4
   Battery: lowest 28.4 %    final 81.3 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,temperature,combined_v4,3.831,2.307,446,183,189.02,663.51,431.90,100.00,0,28.37,81.34,59.5,5
+RESULT,sunny_to_cloudy,temperature,triAS,3.831,2.307,446,183,189.02,663.51,431.90,100.00,0,28.37,81.34,59.5,5
 RUN,cloudy_to_sunny,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=fixed_rate | seed=5 ====
@@ -7072,9 +7072,9 @@ RUN,cloudy_to_sunny,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,temperature,energy_only,5.339,3.704,742,111,190.86,652.58,424.68,100.00,0,27.96,77.42,105.0,5
-RUN,cloudy_to_sunny,temperature,combined_v4
+RUN,cloudy_to_sunny,temperature,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=temperature | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 3.88 %   (lower is better)
   Samples taken: 431 of 5760    Transmissions: 181
   Energy used by node: 185.8 J   harvested from sun: 647.6 J   wasted (battery full): 418.0 J
@@ -7082,7 +7082,7 @@ RUN,cloudy_to_sunny,temperature,combined_v4
   Battery: lowest 21.9 %    final 82.1 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,temperature,combined_v4,3.877,2.360,431,181,185.82,647.56,418.01,100.00,0,21.88,82.15,59.5,5
+RESULT,cloudy_to_sunny,temperature,triAS,3.877,2.360,431,181,185.82,647.56,418.01,100.00,0,21.88,82.15,59.5,5
 RUN,cloudy,temperature,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=temperature | method=fixed_rate | seed=5 ====
@@ -7116,9 +7116,9 @@ RUN,cloudy,temperature,energy_only
   Longest time without data reaching the gateway: 105.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,temperature,energy_only,5.287,3.651,575,111,167.48,171.07,0.00,100.00,0,27.96,52.83,105.0,5
-RUN,cloudy,temperature,combined_v4
+RUN,cloudy,temperature,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=temperature | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=cloudy | signal=temperature | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 3.85 %   (lower is better)
   Samples taken: 429 of 5760    Transmissions: 181
   Energy used by node: 185.5 J   harvested from sun: 166.3 J   wasted (battery full): 0.0 J
@@ -7126,11 +7126,11 @@ RUN,cloudy,temperature,combined_v4
   Battery: lowest 21.0 %    final 34.9 %
   Longest time without data reaching the gateway: 59.5 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,temperature,combined_v4,3.847,2.326,429,181,185.54,166.33,0.00,100.00,0,20.95,34.91,59.5,5
+RESULT,cloudy,temperature,triAS,3.847,2.326,429,181,185.54,166.33,0.00,100.00,0,20.95,34.91,59.5,5
 SWEEP_DONE
-RUN,cloudy,humidity,combined_v4
+RUN,cloudy,humidity,triAS
 day 1 00:00 | sun   0% | battery 3.594 V ( 49.5%) | humidity 50.0 %RH | samples    1 | sent    1 | node ON
-RUN,cloudy,humidity,combined_v4
+RUN,cloudy,humidity,triAS
 TRACE,humidity,0,50.00
 day 1 00:00 | sun   0% | battery 3.594 V ( 49.5%) | humidity 50.0 %RH | samples    1 | sent    1 | node ON
 TRACE,humidity,1,50.00
@@ -13213,9 +13213,9 @@ RUN,sunny,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,humidity,energy_only,8.240,2.489,994,35,184.34,1147.59,922.88,100.00,0,35.70,79.75,492.5,1
-RUN,sunny,humidity,combined_v4
+RUN,sunny,humidity,triAS
 
-==== RUN FINISHED: weather=sunny | signal=humidity | method=combined_v4 | seed=1 ====
+==== RUN FINISHED: weather=sunny | signal=humidity | method=triAS | seed=1 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 1151.0 J   wasted (battery full): 994.9 J
@@ -13223,7 +13223,7 @@ RUN,sunny,humidity,combined_v4
   Battery: lowest 38.2 %    final 89.2 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,humidity,combined_v4,2.191,0.362,234,79,102.13,1151.04,994.90,100.00,0,38.18,89.18,60.0,1
+RESULT,sunny,humidity,triAS,2.191,0.362,234,79,102.13,1151.04,994.90,100.00,0,38.18,89.18,60.0,1
 RUN,sunny_to_cloudy,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=fixed_rate | seed=1 ====
@@ -13257,9 +13257,9 @@ RUN,sunny_to_cloudy,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,humidity,energy_only,8.240,2.489,973,35,181.40,663.05,443.90,100.00,0,35.70,77.90,492.5,1
-RUN,sunny_to_cloudy,humidity,combined_v4
+RUN,sunny_to_cloudy,humidity,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=combined_v4 | seed=1 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=triAS | seed=1 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 667.5 J   wasted (battery full): 512.2 J
@@ -13267,7 +13267,7 @@ RUN,sunny_to_cloudy,humidity,combined_v4
   Battery: lowest 38.2 %    final 88.6 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,humidity,combined_v4,2.191,0.362,234,79,102.13,667.53,512.21,100.00,0,38.18,88.62,60.0,1
+RESULT,sunny_to_cloudy,humidity,triAS,2.191,0.362,234,79,102.13,667.53,512.21,100.00,0,38.18,88.62,60.0,1
 RUN,cloudy_to_sunny,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=fixed_rate | seed=1 ====
@@ -13301,9 +13301,9 @@ RUN,cloudy_to_sunny,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,humidity,energy_only,8.240,2.486,831,35,161.52,661.21,459.30,100.00,0,33.20,79.75,492.5,1
-RUN,cloudy_to_sunny,humidity,combined_v4
+RUN,cloudy_to_sunny,humidity,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=combined_v4 | seed=1 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=triAS | seed=1 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 666.9 J   wasted (battery full): 510.7 J
@@ -13311,7 +13311,7 @@ RUN,cloudy_to_sunny,humidity,combined_v4
   Battery: lowest 35.6 %    final 89.2 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,humidity,combined_v4,2.191,0.362,234,79,102.13,666.88,510.73,100.00,0,35.56,89.18,60.0,1
+RESULT,cloudy_to_sunny,humidity,triAS,2.191,0.362,234,79,102.13,666.88,510.73,100.00,0,35.56,89.18,60.0,1
 RUN,cloudy,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=humidity | method=fixed_rate | seed=1 ====
@@ -13345,9 +13345,9 @@ RUN,cloudy,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,humidity,energy_only,8.239,2.482,773,35,153.40,176.02,0.00,100.00,0,33.20,67.02,492.5,1
-RUN,cloudy,humidity,combined_v4
+RUN,cloudy,humidity,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=humidity | method=combined_v4 | seed=1 ====
+==== RUN FINISHED: weather=cloudy | signal=humidity | method=triAS | seed=1 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 183.1 J   wasted (battery full): 27.8 J
@@ -13355,7 +13355,7 @@ RUN,cloudy,humidity,combined_v4
   Battery: lowest 35.6 %    final 88.6 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,humidity,combined_v4,2.191,0.362,234,79,102.13,183.09,27.76,100.00,0,35.56,88.62,60.0,1
+RESULT,cloudy,humidity,triAS,2.191,0.362,234,79,102.13,183.09,27.76,100.00,0,35.56,88.62,60.0,1
 RUN,sunny,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=sunny | signal=humidity | method=fixed_rate | seed=2 ====
@@ -13389,9 +13389,9 @@ RUN,sunny,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,humidity,energy_only,8.240,2.489,994,35,184.34,1153.04,928.33,100.00,0,35.70,79.74,492.5,2
-RUN,sunny,humidity,combined_v4
+RUN,sunny,humidity,triAS
 
-==== RUN FINISHED: weather=sunny | signal=humidity | method=combined_v4 | seed=2 ====
+==== RUN FINISHED: weather=sunny | signal=humidity | method=triAS | seed=2 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 1156.5 J   wasted (battery full): 1000.3 J
@@ -13399,7 +13399,7 @@ RUN,sunny,humidity,combined_v4
   Battery: lowest 38.2 %    final 89.2 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,humidity,combined_v4,2.191,0.362,234,79,102.13,1156.46,1000.33,100.00,0,38.18,89.18,60.0,2
+RESULT,sunny,humidity,triAS,2.191,0.362,234,79,102.13,1156.46,1000.33,100.00,0,38.18,89.18,60.0,2
 RUN,sunny_to_cloudy,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=fixed_rate | seed=2 ====
@@ -13433,9 +13433,9 @@ RUN,sunny_to_cloudy,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,humidity,energy_only,8.240,2.489,980,35,182.38,671.65,451.90,100.00,0,35.70,77.63,492.5,2
-RUN,sunny_to_cloudy,humidity,combined_v4
+RUN,sunny_to_cloudy,humidity,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=combined_v4 | seed=2 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=triAS | seed=2 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 676.0 J   wasted (battery full): 520.8 J
@@ -13443,7 +13443,7 @@ RUN,sunny_to_cloudy,humidity,combined_v4
   Battery: lowest 38.2 %    final 88.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,humidity,combined_v4,2.191,0.362,234,79,102.13,675.98,520.77,100.00,0,38.18,88.54,60.0,2
+RESULT,sunny_to_cloudy,humidity,triAS,2.191,0.362,234,79,102.13,675.98,520.77,100.00,0,38.18,88.54,60.0,2
 RUN,cloudy_to_sunny,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=fixed_rate | seed=2 ====
@@ -13477,9 +13477,9 @@ RUN,cloudy_to_sunny,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,humidity,energy_only,8.239,2.484,904,35,171.74,685.82,473.70,100.00,0,33.65,79.74,492.5,2
-RUN,cloudy_to_sunny,humidity,combined_v4
+RUN,cloudy_to_sunny,humidity,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=combined_v4 | seed=2 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=triAS | seed=2 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 691.2 J   wasted (battery full): 535.0 J
@@ -13487,7 +13487,7 @@ RUN,cloudy_to_sunny,humidity,combined_v4
   Battery: lowest 36.7 %    final 89.2 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,humidity,combined_v4,2.191,0.362,234,79,102.13,691.17,535.01,100.00,0,36.66,89.18,60.0,2
+RESULT,cloudy_to_sunny,humidity,triAS,2.191,0.362,234,79,102.13,691.17,535.01,100.00,0,36.66,89.18,60.0,2
 RUN,cloudy,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=humidity | method=fixed_rate | seed=2 ====
@@ -13521,9 +13521,9 @@ RUN,cloudy,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,humidity,energy_only,8.239,2.484,884,35,168.94,204.08,0.00,100.00,0,33.65,76.03,492.5,2
-RUN,cloudy,humidity,combined_v4
+RUN,cloudy,humidity,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=humidity | method=combined_v4 | seed=2 ====
+==== RUN FINISHED: weather=cloudy | signal=humidity | method=triAS | seed=2 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 210.7 J   wasted (battery full): 55.4 J
@@ -13531,7 +13531,7 @@ RUN,cloudy,humidity,combined_v4
   Battery: lowest 36.7 %    final 88.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,humidity,combined_v4,2.191,0.362,234,79,102.13,210.67,55.44,100.00,0,36.66,88.54,60.0,2
+RESULT,cloudy,humidity,triAS,2.191,0.362,234,79,102.13,210.67,55.44,100.00,0,36.66,88.54,60.0,2
 RUN,sunny,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=sunny | signal=humidity | method=fixed_rate | seed=3 ====
@@ -13565,9 +13565,9 @@ RUN,sunny,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,humidity,energy_only,8.240,2.489,994,35,184.34,1152.30,927.58,100.00,0,35.70,79.75,492.5,3
-RUN,sunny,humidity,combined_v4
+RUN,sunny,humidity,triAS
 
-==== RUN FINISHED: weather=sunny | signal=humidity | method=combined_v4 | seed=3 ====
+==== RUN FINISHED: weather=sunny | signal=humidity | method=triAS | seed=3 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 1155.7 J   wasted (battery full): 999.6 J
@@ -13575,7 +13575,7 @@ RUN,sunny,humidity,combined_v4
   Battery: lowest 38.2 %    final 89.2 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,humidity,combined_v4,2.191,0.362,234,79,102.13,1155.75,999.61,100.00,0,38.18,89.17,60.0,3
+RESULT,sunny,humidity,triAS,2.191,0.362,234,79,102.13,1155.75,999.61,100.00,0,38.18,89.17,60.0,3
 RUN,sunny_to_cloudy,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=fixed_rate | seed=3 ====
@@ -13609,9 +13609,9 @@ RUN,sunny_to_cloudy,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,humidity,energy_only,8.240,2.489,971,35,181.12,684.26,465.09,100.00,0,35.70,78.11,492.5,3
-RUN,sunny_to_cloudy,humidity,combined_v4
+RUN,sunny_to_cloudy,humidity,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=combined_v4 | seed=3 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=triAS | seed=3 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 688.5 J   wasted (battery full): 532.9 J
@@ -13619,7 +13619,7 @@ RUN,sunny_to_cloudy,humidity,combined_v4
   Battery: lowest 38.2 %    final 88.8 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,humidity,combined_v4,2.191,0.362,234,79,102.13,688.47,532.89,100.00,0,38.18,88.80,60.0,3
+RESULT,sunny_to_cloudy,humidity,triAS,2.191,0.362,234,79,102.13,688.47,532.89,100.00,0,38.18,88.80,60.0,3
 RUN,cloudy_to_sunny,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=fixed_rate | seed=3 ====
@@ -13653,9 +13653,9 @@ RUN,cloudy_to_sunny,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,humidity,energy_only,8.240,2.486,849,35,164.04,670.72,466.29,100.00,0,33.43,79.75,492.5,3
-RUN,cloudy_to_sunny,humidity,combined_v4
+RUN,cloudy_to_sunny,humidity,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=combined_v4 | seed=3 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=triAS | seed=3 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 676.5 J   wasted (battery full): 520.3 J
@@ -13663,7 +13663,7 @@ RUN,cloudy_to_sunny,humidity,combined_v4
   Battery: lowest 36.0 %    final 89.2 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,humidity,combined_v4,2.191,0.362,234,79,102.13,676.47,520.32,100.00,0,35.98,89.17,60.0,3
+RESULT,cloudy_to_sunny,humidity,triAS,2.191,0.362,234,79,102.13,676.47,520.32,100.00,0,35.98,89.17,60.0,3
 RUN,cloudy,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=humidity | method=fixed_rate | seed=3 ====
@@ -13697,9 +13697,9 @@ RUN,cloudy,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,humidity,energy_only,8.240,2.486,815,35,159.28,202.13,4.77,100.00,0,33.43,78.11,492.5,3
-RUN,cloudy,humidity,combined_v4
+RUN,cloudy,humidity,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=humidity | method=combined_v4 | seed=3 ====
+==== RUN FINISHED: weather=cloudy | signal=humidity | method=triAS | seed=3 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 209.1 J   wasted (battery full): 53.5 J
@@ -13707,7 +13707,7 @@ RUN,cloudy,humidity,combined_v4
   Battery: lowest 36.0 %    final 88.8 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,humidity,combined_v4,2.191,0.362,234,79,102.13,209.05,53.46,100.00,0,35.98,88.80,60.0,3
+RESULT,cloudy,humidity,triAS,2.191,0.362,234,79,102.13,209.05,53.46,100.00,0,35.98,88.80,60.0,3
 RUN,sunny,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=sunny | signal=humidity | method=fixed_rate | seed=4 ====
@@ -13741,9 +13741,9 @@ RUN,sunny,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,humidity,energy_only,8.240,2.489,994,35,184.34,1148.84,924.12,100.00,0,35.70,79.75,492.5,4
-RUN,sunny,humidity,combined_v4
+RUN,sunny,humidity,triAS
 
-==== RUN FINISHED: weather=sunny | signal=humidity | method=combined_v4 | seed=4 ====
+==== RUN FINISHED: weather=sunny | signal=humidity | method=triAS | seed=4 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 1152.3 J   wasted (battery full): 996.1 J
@@ -13751,7 +13751,7 @@ RUN,sunny,humidity,combined_v4
   Battery: lowest 38.2 %    final 89.2 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,humidity,combined_v4,2.191,0.362,234,79,102.13,1152.28,996.14,100.00,0,38.18,89.18,60.0,4
+RESULT,sunny,humidity,triAS,2.191,0.362,234,79,102.13,1152.28,996.14,100.00,0,38.18,89.18,60.0,4
 RUN,sunny_to_cloudy,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=fixed_rate | seed=4 ====
@@ -13785,9 +13785,9 @@ RUN,sunny_to_cloudy,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,humidity,energy_only,8.240,2.489,966,35,180.42,683.62,464.23,100.00,0,35.70,78.76,492.5,4
-RUN,sunny_to_cloudy,humidity,combined_v4
+RUN,sunny_to_cloudy,humidity,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=combined_v4 | seed=4 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=triAS | seed=4 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 687.8 J   wasted (battery full): 532.4 J
@@ -13795,7 +13795,7 @@ RUN,sunny_to_cloudy,humidity,combined_v4
   Battery: lowest 38.2 %    final 88.7 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,humidity,combined_v4,2.191,0.362,234,79,102.13,687.79,532.40,100.00,0,38.18,88.67,60.0,4
+RESULT,sunny_to_cloudy,humidity,triAS,2.191,0.362,234,79,102.13,687.79,532.40,100.00,0,38.18,88.67,60.0,4
 RUN,cloudy_to_sunny,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=fixed_rate | seed=4 ====
@@ -13829,9 +13829,9 @@ RUN,cloudy_to_sunny,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,humidity,energy_only,8.240,2.486,765,35,152.28,647.65,454.98,100.00,0,33.83,79.75,492.5,4
-RUN,cloudy_to_sunny,humidity,combined_v4
+RUN,cloudy_to_sunny,humidity,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=combined_v4 | seed=4 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=triAS | seed=4 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 652.2 J   wasted (battery full): 496.1 J
@@ -13839,7 +13839,7 @@ RUN,cloudy_to_sunny,humidity,combined_v4
   Battery: lowest 36.3 %    final 89.2 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,humidity,combined_v4,2.191,0.362,234,79,102.13,652.25,496.10,100.00,0,36.34,89.18,60.0,4
+RESULT,cloudy_to_sunny,humidity,triAS,2.191,0.362,234,79,102.13,652.25,496.10,100.00,0,36.34,89.18,60.0,4
 RUN,cloudy,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=humidity | method=fixed_rate | seed=4 ====
@@ -13873,9 +13873,9 @@ RUN,cloudy,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,humidity,energy_only,8.239,2.483,726,35,146.82,181.31,0.00,100.00,0,33.83,75.57,492.5,4
-RUN,cloudy,humidity,combined_v4
+RUN,cloudy,humidity,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=humidity | method=combined_v4 | seed=4 ====
+==== RUN FINISHED: weather=cloudy | signal=humidity | method=triAS | seed=4 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 187.2 J   wasted (battery full): 31.8 J
@@ -13883,7 +13883,7 @@ RUN,cloudy,humidity,combined_v4
   Battery: lowest 36.3 %    final 88.7 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,humidity,combined_v4,2.191,0.362,234,79,102.13,187.21,31.80,100.00,0,36.34,88.67,60.0,4
+RESULT,cloudy,humidity,triAS,2.191,0.362,234,79,102.13,187.21,31.80,100.00,0,36.34,88.67,60.0,4
 RUN,sunny,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=sunny | signal=humidity | method=fixed_rate | seed=5 ====
@@ -13917,9 +13917,9 @@ RUN,sunny,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,humidity,energy_only,8.240,2.489,994,35,184.34,1146.83,922.12,100.00,0,35.70,79.74,492.5,5
-RUN,sunny,humidity,combined_v4
+RUN,sunny,humidity,triAS
 
-==== RUN FINISHED: weather=sunny | signal=humidity | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=sunny | signal=humidity | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 1150.3 J   wasted (battery full): 994.1 J
@@ -13927,7 +13927,7 @@ RUN,sunny,humidity,combined_v4
   Battery: lowest 38.2 %    final 89.2 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,humidity,combined_v4,2.191,0.362,234,79,102.13,1150.26,994.12,100.00,0,38.18,89.17,60.0,5
+RESULT,sunny,humidity,triAS,2.191,0.362,234,79,102.13,1150.26,994.12,100.00,0,38.18,89.17,60.0,5
 RUN,sunny_to_cloudy,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=fixed_rate | seed=5 ====
@@ -13961,9 +13961,9 @@ RUN,sunny_to_cloudy,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,humidity,energy_only,8.240,2.489,980,35,182.38,666.46,445.19,100.00,0,35.70,78.70,492.5,5
-RUN,sunny_to_cloudy,humidity,combined_v4
+RUN,sunny_to_cloudy,humidity,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 670.8 J   wasted (battery full): 515.4 J
@@ -13971,7 +13971,7 @@ RUN,sunny_to_cloudy,humidity,combined_v4
   Battery: lowest 38.2 %    final 88.7 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,humidity,combined_v4,2.191,0.362,234,79,102.13,670.84,515.44,100.00,0,38.18,88.67,60.0,5
+RESULT,sunny_to_cloudy,humidity,triAS,2.191,0.362,234,79,102.13,670.84,515.44,100.00,0,38.18,88.67,60.0,5
 RUN,cloudy_to_sunny,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=fixed_rate | seed=5 ====
@@ -14005,9 +14005,9 @@ RUN,cloudy_to_sunny,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,humidity,energy_only,8.240,2.486,834,35,161.94,659.45,457.13,100.00,0,32.72,79.74,492.5,5
-RUN,cloudy_to_sunny,humidity,combined_v4
+RUN,cloudy_to_sunny,humidity,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 665.1 J   wasted (battery full): 509.0 J
@@ -14015,7 +14015,7 @@ RUN,cloudy_to_sunny,humidity,combined_v4
   Battery: lowest 35.1 %    final 89.2 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,humidity,combined_v4,2.191,0.362,234,79,102.13,665.14,508.99,100.00,0,35.09,89.17,60.0,5
+RESULT,cloudy_to_sunny,humidity,triAS,2.191,0.362,234,79,102.13,665.14,508.99,100.00,0,35.09,89.17,60.0,5
 RUN,cloudy,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=humidity | method=fixed_rate | seed=5 ====
@@ -14049,9 +14049,9 @@ RUN,cloudy,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,humidity,energy_only,8.240,2.486,791,35,155.92,178.08,0.00,100.00,0,32.72,66.68,492.5,5
-RUN,cloudy,humidity,combined_v4
+RUN,cloudy,humidity,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=humidity | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=cloudy | signal=humidity | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 185.5 J   wasted (battery full): 30.1 J
@@ -14059,7 +14059,7 @@ RUN,cloudy,humidity,combined_v4
   Battery: lowest 35.1 %    final 88.7 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,humidity,combined_v4,2.191,0.362,234,79,102.13,185.54,30.12,100.00,0,35.09,88.67,60.0,5
+RESULT,cloudy,humidity,triAS,2.191,0.362,234,79,102.13,185.54,30.12,100.00,0,35.09,88.67,60.0,5
 SWEEP_DONE
 RUN,sunny,humidity,fixed_rate
 
@@ -14094,9 +14094,9 @@ RUN,sunny,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,humidity,energy_only,8.240,2.489,994,35,184.34,1146.83,922.12,100.00,0,35.70,79.74,492.5,5
-RUN,sunny,humidity,combined_v4
+RUN,sunny,humidity,triAS
 
-==== RUN FINISHED: weather=sunny | signal=humidity | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=sunny | signal=humidity | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 1150.3 J   wasted (battery full): 994.1 J
@@ -14104,7 +14104,7 @@ RUN,sunny,humidity,combined_v4
   Battery: lowest 38.2 %    final 89.2 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,humidity,combined_v4,2.191,0.362,234,79,102.13,1150.26,994.12,100.00,0,38.18,89.17,60.0,5
+RESULT,sunny,humidity,triAS,2.191,0.362,234,79,102.13,1150.26,994.12,100.00,0,38.18,89.17,60.0,5
 RUN,sunny_to_cloudy,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=fixed_rate | seed=5 ====
@@ -14138,9 +14138,9 @@ RUN,sunny_to_cloudy,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,humidity,energy_only,8.240,2.489,980,35,182.38,666.46,445.19,100.00,0,35.70,78.70,492.5,5
-RUN,sunny_to_cloudy,humidity,combined_v4
+RUN,sunny_to_cloudy,humidity,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=humidity | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 670.8 J   wasted (battery full): 515.4 J
@@ -14148,7 +14148,7 @@ RUN,sunny_to_cloudy,humidity,combined_v4
   Battery: lowest 38.2 %    final 88.7 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,humidity,combined_v4,2.191,0.362,234,79,102.13,670.84,515.44,100.00,0,38.18,88.67,60.0,5
+RESULT,sunny_to_cloudy,humidity,triAS,2.191,0.362,234,79,102.13,670.84,515.44,100.00,0,38.18,88.67,60.0,5
 RUN,cloudy_to_sunny,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=fixed_rate | seed=5 ====
@@ -14182,9 +14182,9 @@ RUN,cloudy_to_sunny,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,humidity,energy_only,8.240,2.486,834,35,161.94,659.45,457.13,100.00,0,32.72,79.74,492.5,5
-RUN,cloudy_to_sunny,humidity,combined_v4
+RUN,cloudy_to_sunny,humidity,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=humidity | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 665.1 J   wasted (battery full): 509.0 J
@@ -14192,7 +14192,7 @@ RUN,cloudy_to_sunny,humidity,combined_v4
   Battery: lowest 35.1 %    final 89.2 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,humidity,combined_v4,2.191,0.362,234,79,102.13,665.14,508.99,100.00,0,35.09,89.17,60.0,5
+RESULT,cloudy_to_sunny,humidity,triAS,2.191,0.362,234,79,102.13,665.14,508.99,100.00,0,35.09,89.17,60.0,5
 RUN,cloudy,humidity,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=humidity | method=fixed_rate | seed=5 ====
@@ -14226,9 +14226,9 @@ RUN,cloudy,humidity,energy_only
   Longest time without data reaching the gateway: 492.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,humidity,energy_only,8.240,2.486,791,35,155.92,178.08,0.00,100.00,0,32.72,66.68,492.5,5
-RUN,cloudy,humidity,combined_v4
+RUN,cloudy,humidity,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=humidity | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=cloudy | signal=humidity | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 2.19 %   (lower is better)
   Samples taken: 234 of 5760    Transmissions: 79
   Energy used by node: 102.1 J   harvested from sun: 185.5 J   wasted (battery full): 30.1 J
@@ -14236,11 +14236,11 @@ RUN,cloudy,humidity,combined_v4
   Battery: lowest 35.1 %    final 88.7 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,humidity,combined_v4,2.191,0.362,234,79,102.13,185.54,30.12,100.00,0,35.09,88.67,60.0,5
+RESULT,cloudy,humidity,triAS,2.191,0.362,234,79,102.13,185.54,30.12,100.00,0,35.09,88.67,60.0,5
 SWEEP_DONE
-RUN,cloudy,soil,combined_v4
+RUN,cloudy,soil,triAS
 day 1 00:00 | sun   0% | battery 3.594 V ( 49.5%) | soil 0.0 % | samples    1 | sent    1 | node ON
-RUN,cloudy,soil,combined_v4
+RUN,cloudy,soil,triAS
 TRACE,soil,0,0.00
 day 1 00:00 | sun   0% | battery 3.594 V ( 49.5%) | soil 0.0 % | samples    1 | sent    1 | node ON
 TRACE,soil,1,0.00
@@ -20323,9 +20323,9 @@ RUN,sunny,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,soil,energy_only,31.354,18.178,973,88,210.55,1144.25,889.51,100.00,0,31.66,82.44,449.5,1
-RUN,sunny,soil,combined_v4
+RUN,sunny,soil,triAS
 
-==== RUN FINISHED: weather=sunny | signal=soil | method=combined_v4 | seed=1 ====
+==== RUN FINISHED: weather=sunny | signal=soil | method=triAS | seed=1 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 1150.3 J   wasted (battery full): 989.7 J
@@ -20333,7 +20333,7 @@ RUN,sunny,soil,combined_v4
   Battery: lowest 34.7 %    final 92.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,soil,combined_v4,13.125,3.611,246,75,101.62,1150.27,989.69,100.00,0,34.71,92.55,60.0,1
+RESULT,sunny,soil,triAS,13.125,3.611,246,75,101.62,1150.27,989.69,100.00,0,34.71,92.55,60.0,1
 RUN,sunny_to_cloudy,soil,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=fixed_rate | seed=1 ====
@@ -20367,9 +20367,9 @@ RUN,sunny_to_cloudy,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,soil,energy_only,31.354,18.178,921,88,203.27,659.37,432.07,100.00,0,31.66,68.09,449.5,1
-RUN,sunny_to_cloudy,soil,combined_v4
+RUN,sunny_to_cloudy,soil,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=combined_v4 | seed=1 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=triAS | seed=1 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 666.7 J   wasted (battery full): 507.7 J
@@ -20377,7 +20377,7 @@ RUN,sunny_to_cloudy,soil,combined_v4
   Battery: lowest 34.7 %    final 91.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,soil,combined_v4,13.125,3.611,246,75,101.62,666.75,507.75,100.00,0,34.71,91.47,60.0,1
+RESULT,sunny_to_cloudy,soil,triAS,13.125,3.611,246,75,101.62,666.75,507.75,100.00,0,34.71,91.47,60.0,1
 RUN,cloudy_to_sunny,soil,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=fixed_rate | seed=1 ====
@@ -20411,9 +20411,9 @@ RUN,cloudy_to_sunny,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,soil,energy_only,31.574,18.336,786,83,181.62,656.77,430.95,100.00,0,29.60,82.44,449.5,1
-RUN,cloudy_to_sunny,soil,combined_v4
+RUN,cloudy_to_sunny,soil,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=combined_v4 | seed=1 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=triAS | seed=1 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 665.5 J   wasted (battery full): 504.9 J
@@ -20421,7 +20421,7 @@ RUN,cloudy_to_sunny,soil,combined_v4
   Battery: lowest 33.8 %    final 92.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,soil,combined_v4,13.125,3.611,246,75,101.62,665.54,504.95,100.00,0,33.81,92.55,60.0,1
+RESULT,cloudy_to_sunny,soil,triAS,13.125,3.611,246,75,101.62,665.54,504.95,100.00,0,33.81,92.55,60.0,1
 RUN,cloudy,soil,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=soil | method=fixed_rate | seed=1 ====
@@ -20455,9 +20455,9 @@ RUN,cloudy,soil,energy_only
   Longest time without data reaching the gateway: 447.0 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,soil,energy_only,31.582,18.354,649,83,162.44,171.60,0.00,100.00,0,29.60,57.05,447.0,1
-RUN,cloudy,soil,combined_v4
+RUN,cloudy,soil,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=soil | method=combined_v4 | seed=1 ====
+==== RUN FINISHED: weather=cloudy | signal=soil | method=triAS | seed=1 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 181.7 J   wasted (battery full): 22.7 J
@@ -20465,7 +20465,7 @@ RUN,cloudy,soil,combined_v4
   Battery: lowest 33.8 %    final 91.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,soil,combined_v4,13.125,3.611,246,75,101.62,181.72,22.71,100.00,0,33.81,91.47,60.0,1
+RESULT,cloudy,soil,triAS,13.125,3.611,246,75,101.62,181.72,22.71,100.00,0,33.81,91.47,60.0,1
 RUN,sunny,soil,fixed_rate
 
 ==== RUN FINISHED: weather=sunny | signal=soil | method=fixed_rate | seed=2 ====
@@ -20499,9 +20499,9 @@ RUN,sunny,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,soil,energy_only,31.354,18.178,974,88,210.69,1149.68,894.81,100.00,0,31.66,82.43,449.5,2
-RUN,sunny,soil,combined_v4
+RUN,sunny,soil,triAS
 
-==== RUN FINISHED: weather=sunny | signal=soil | method=combined_v4 | seed=2 ====
+==== RUN FINISHED: weather=sunny | signal=soil | method=triAS | seed=2 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 1155.7 J   wasted (battery full): 995.1 J
@@ -20509,7 +20509,7 @@ RUN,sunny,soil,combined_v4
   Battery: lowest 34.7 %    final 92.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,soil,combined_v4,13.125,3.611,246,75,101.62,1155.70,995.12,100.00,0,34.71,92.55,60.0,2
+RESULT,sunny,soil,triAS,13.125,3.611,246,75,101.62,1155.70,995.12,100.00,0,34.71,92.55,60.0,2
 RUN,sunny_to_cloudy,soil,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=fixed_rate | seed=2 ====
@@ -20543,9 +20543,9 @@ RUN,sunny_to_cloudy,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,soil,energy_only,31.354,18.178,942,88,206.21,667.74,436.67,100.00,0,31.66,68.69,449.5,2
-RUN,sunny_to_cloudy,soil,combined_v4
+RUN,sunny_to_cloudy,soil,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=combined_v4 | seed=2 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=triAS | seed=2 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 675.2 J   wasted (battery full): 516.4 J
@@ -20553,7 +20553,7 @@ RUN,sunny_to_cloudy,soil,combined_v4
   Battery: lowest 34.7 %    final 91.4 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,soil,combined_v4,13.125,3.611,246,75,101.62,675.19,516.35,100.00,0,34.71,91.36,60.0,2
+RESULT,sunny_to_cloudy,soil,triAS,13.125,3.611,246,75,101.62,675.19,516.35,100.00,0,34.71,91.36,60.0,2
 RUN,cloudy_to_sunny,soil,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=fixed_rate | seed=2 ====
@@ -20587,9 +20587,9 @@ RUN,cloudy_to_sunny,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,soil,energy_only,31.317,18.148,862,84,192.81,681.18,444.17,100.00,0,29.75,82.43,449.5,2
-RUN,cloudy_to_sunny,soil,combined_v4
+RUN,cloudy_to_sunny,soil,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=combined_v4 | seed=2 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=triAS | seed=2 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 690.4 J   wasted (battery full): 529.8 J
@@ -20597,7 +20597,7 @@ RUN,cloudy_to_sunny,soil,combined_v4
   Battery: lowest 33.8 %    final 92.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,soil,combined_v4,13.125,3.611,246,75,101.62,690.36,529.76,100.00,0,33.80,92.55,60.0,2
+RESULT,cloudy_to_sunny,soil,triAS,13.125,3.611,246,75,101.62,690.36,529.76,100.00,0,33.80,92.55,60.0,2
 RUN,cloudy,soil,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=soil | method=fixed_rate | seed=2 ====
@@ -20631,9 +20631,9 @@ RUN,cloudy,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,soil,energy_only,31.317,18.148,779,84,181.19,198.97,0.00,100.00,0,29.75,63.49,449.5,2
-RUN,cloudy,soil,combined_v4
+RUN,cloudy,soil,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=soil | method=combined_v4 | seed=2 ====
+==== RUN FINISHED: weather=cloudy | signal=soil | method=triAS | seed=2 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 209.8 J   wasted (battery full): 51.0 J
@@ -20641,7 +20641,7 @@ RUN,cloudy,soil,combined_v4
   Battery: lowest 33.8 %    final 91.4 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,soil,combined_v4,13.125,3.611,246,75,101.62,209.84,50.99,100.00,0,33.80,91.36,60.0,2
+RESULT,cloudy,soil,triAS,13.125,3.611,246,75,101.62,209.84,50.99,100.00,0,33.80,91.36,60.0,2
 RUN,sunny,soil,fixed_rate
 
 ==== RUN FINISHED: weather=sunny | signal=soil | method=fixed_rate | seed=3 ====
@@ -20675,9 +20675,9 @@ RUN,sunny,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,soil,energy_only,31.354,18.178,973,88,210.55,1148.95,894.21,100.00,0,31.67,82.44,449.5,3
-RUN,sunny,soil,combined_v4
+RUN,sunny,soil,triAS
 
-==== RUN FINISHED: weather=sunny | signal=soil | method=combined_v4 | seed=3 ====
+==== RUN FINISHED: weather=sunny | signal=soil | method=triAS | seed=3 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 1155.0 J   wasted (battery full): 994.4 J
@@ -20685,7 +20685,7 @@ RUN,sunny,soil,combined_v4
   Battery: lowest 34.7 %    final 92.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,soil,combined_v4,13.125,3.611,246,75,101.62,1154.98,994.39,100.00,0,34.71,92.55,60.0,3
+RESULT,sunny,soil,triAS,13.125,3.611,246,75,101.62,1154.98,994.39,100.00,0,34.71,92.55,60.0,3
 RUN,sunny_to_cloudy,soil,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=fixed_rate | seed=3 ====
@@ -20719,9 +20719,9 @@ RUN,sunny_to_cloudy,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,soil,energy_only,31.354,18.178,944,88,206.49,680.55,439.30,100.00,0,31.67,75.80,449.5,3
-RUN,sunny_to_cloudy,soil,combined_v4
+RUN,sunny_to_cloudy,soil,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=combined_v4 | seed=3 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=triAS | seed=3 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 687.7 J   wasted (battery full): 528.1 J
@@ -20729,7 +20729,7 @@ RUN,sunny_to_cloudy,soil,combined_v4
   Battery: lowest 34.7 %    final 91.8 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,soil,combined_v4,13.125,3.611,246,75,101.62,687.68,528.13,100.00,0,34.71,91.85,60.0,3
+RESULT,sunny_to_cloudy,soil,triAS,13.125,3.611,246,75,101.62,687.68,528.13,100.00,0,34.71,91.85,60.0,3
 RUN,cloudy_to_sunny,soil,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=fixed_rate | seed=3 ====
@@ -20763,9 +20763,9 @@ RUN,cloudy_to_sunny,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,soil,energy_only,31.614,18.378,809,83,184.84,666.02,436.97,100.00,0,29.53,82.44,449.5,3
-RUN,cloudy_to_sunny,soil,combined_v4
+RUN,cloudy_to_sunny,soil,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=combined_v4 | seed=3 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=triAS | seed=3 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 675.2 J   wasted (battery full): 514.6 J
@@ -20773,7 +20773,7 @@ RUN,cloudy_to_sunny,soil,combined_v4
   Battery: lowest 33.9 %    final 92.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,soil,combined_v4,13.125,3.611,246,75,101.62,675.21,514.61,100.00,0,33.91,92.55,60.0,3
+RESULT,cloudy_to_sunny,soil,triAS,13.125,3.611,246,75,101.62,675.21,514.61,100.00,0,33.91,92.55,60.0,3
 RUN,cloudy,soil,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=soil | method=fixed_rate | seed=3 ====
@@ -20807,9 +20807,9 @@ RUN,cloudy,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,soil,energy_only,31.614,18.378,742,83,175.46,196.72,0.00,100.00,0,29.53,66.05,449.5,3
-RUN,cloudy,soil,combined_v4
+RUN,cloudy,soil,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=soil | method=combined_v4 | seed=3 ====
+==== RUN FINISHED: weather=cloudy | signal=soil | method=triAS | seed=3 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 207.7 J   wasted (battery full): 48.2 J
@@ -20817,7 +20817,7 @@ RUN,cloudy,soil,combined_v4
   Battery: lowest 33.9 %    final 91.8 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,soil,combined_v4,13.125,3.611,246,75,101.62,207.73,48.17,100.00,0,33.91,91.85,60.0,3
+RESULT,cloudy,soil,triAS,13.125,3.611,246,75,101.62,207.73,48.17,100.00,0,33.91,91.85,60.0,3
 RUN,sunny,soil,fixed_rate
 
 ==== RUN FINISHED: weather=sunny | signal=soil | method=fixed_rate | seed=4 ====
@@ -20851,9 +20851,9 @@ RUN,sunny,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,soil,energy_only,31.354,18.178,973,88,210.55,1145.49,890.75,100.00,0,31.66,82.44,449.5,4
-RUN,sunny,soil,combined_v4
+RUN,sunny,soil,triAS
 
-==== RUN FINISHED: weather=sunny | signal=soil | method=combined_v4 | seed=4 ====
+==== RUN FINISHED: weather=sunny | signal=soil | method=triAS | seed=4 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 1151.5 J   wasted (battery full): 990.9 J
@@ -20861,7 +20861,7 @@ RUN,sunny,soil,combined_v4
   Battery: lowest 34.7 %    final 92.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,soil,combined_v4,13.125,3.611,246,75,101.62,1151.51,990.93,100.00,0,34.71,92.55,60.0,4
+RESULT,sunny,soil,triAS,13.125,3.611,246,75,101.62,1151.51,990.93,100.00,0,34.71,92.55,60.0,4
 RUN,sunny_to_cloudy,soil,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=fixed_rate | seed=4 ====
@@ -20895,9 +20895,9 @@ RUN,sunny_to_cloudy,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,soil,energy_only,31.354,18.178,941,88,206.07,679.99,433.10,100.00,0,31.66,80.08,449.5,4
-RUN,sunny_to_cloudy,soil,combined_v4
+RUN,sunny_to_cloudy,soil,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=combined_v4 | seed=4 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=triAS | seed=4 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 687.0 J   wasted (battery full): 527.2 J
@@ -20905,7 +20905,7 @@ RUN,sunny_to_cloudy,soil,combined_v4
   Battery: lowest 34.7 %    final 92.0 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,soil,combined_v4,13.125,3.611,246,75,101.62,687.01,527.18,100.00,0,34.71,92.05,60.0,4
+RESULT,sunny_to_cloudy,soil,triAS,13.125,3.611,246,75,101.62,687.01,527.18,100.00,0,34.71,92.05,60.0,4
 RUN,cloudy_to_sunny,soil,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=fixed_rate | seed=4 ====
@@ -20939,9 +20939,9 @@ RUN,cloudy_to_sunny,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,soil,energy_only,31.276,18.155,744,82,175.19,641.91,422.52,100.00,0,28.27,82.44,449.5,4
-RUN,cloudy_to_sunny,soil,combined_v4
+RUN,cloudy_to_sunny,soil,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=combined_v4 | seed=4 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=triAS | seed=4 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 74
   Energy used by node: 101.1 J   harvested from sun: 650.8 J   wasted (battery full): 490.8 J
@@ -20949,7 +20949,7 @@ RUN,cloudy_to_sunny,soil,combined_v4
   Battery: lowest 33.8 %    final 92.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,soil,combined_v4,13.125,3.611,246,74,101.07,650.81,490.76,100.00,0,33.84,92.55,60.0,4
+RESULT,cloudy_to_sunny,soil,triAS,13.125,3.611,246,74,101.07,650.81,490.76,100.00,0,33.84,92.55,60.0,4
 RUN,cloudy,soil,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=soil | method=fixed_rate | seed=4 ====
@@ -20983,9 +20983,9 @@ RUN,cloudy,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,soil,energy_only,31.276,18.155,630,82,159.23,175.65,0.00,100.00,0,27.30,62.48,449.5,4
-RUN,cloudy,soil,combined_v4
+RUN,cloudy,soil,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=soil | method=combined_v4 | seed=4 ====
+==== RUN FINISHED: weather=cloudy | signal=soil | method=triAS | seed=4 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 74
   Energy used by node: 101.1 J   harvested from sun: 185.8 J   wasted (battery full): 26.5 J
@@ -20993,7 +20993,7 @@ RUN,cloudy,soil,combined_v4
   Battery: lowest 33.8 %    final 92.0 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,soil,combined_v4,13.125,3.611,246,74,101.07,185.81,26.50,100.00,0,33.84,92.05,60.0,4
+RESULT,cloudy,soil,triAS,13.125,3.611,246,74,101.07,185.81,26.50,100.00,0,33.84,92.05,60.0,4
 RUN,sunny,soil,fixed_rate
 
 ==== RUN FINISHED: weather=sunny | signal=soil | method=fixed_rate | seed=5 ====
@@ -21027,9 +21027,9 @@ RUN,sunny,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,soil,energy_only,31.354,18.178,974,88,210.69,1143.48,888.60,100.00,0,31.66,82.43,449.5,5
-RUN,sunny,soil,combined_v4
+RUN,sunny,soil,triAS
 
-==== RUN FINISHED: weather=sunny | signal=soil | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=sunny | signal=soil | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 1149.5 J   wasted (battery full): 988.9 J
@@ -21037,7 +21037,7 @@ RUN,sunny,soil,combined_v4
   Battery: lowest 34.7 %    final 92.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,soil,combined_v4,13.125,3.611,246,75,101.62,1149.50,988.91,100.00,0,34.71,92.55,60.0,5
+RESULT,sunny,soil,triAS,13.125,3.611,246,75,101.62,1149.50,988.91,100.00,0,34.71,92.55,60.0,5
 RUN,sunny_to_cloudy,soil,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=fixed_rate | seed=5 ====
@@ -21071,9 +21071,9 @@ RUN,sunny_to_cloudy,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,soil,energy_only,31.354,18.178,941,88,206.07,662.27,432.47,100.00,0,31.66,67.87,449.5,5
-RUN,sunny_to_cloudy,soil,combined_v4
+RUN,sunny_to_cloudy,soil,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 670.1 J   wasted (battery full): 510.2 J
@@ -21081,7 +21081,7 @@ RUN,sunny_to_cloudy,soil,combined_v4
   Battery: lowest 34.7 %    final 92.0 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,soil,combined_v4,13.125,3.611,246,75,101.62,670.06,510.24,100.00,0,34.71,92.03,60.0,5
+RESULT,sunny_to_cloudy,soil,triAS,13.125,3.611,246,75,101.62,670.06,510.24,100.00,0,34.71,92.03,60.0,5
 RUN,cloudy_to_sunny,soil,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=fixed_rate | seed=5 ====
@@ -21115,9 +21115,9 @@ RUN,cloudy_to_sunny,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,soil,energy_only,31.412,18.172,794,83,182.74,654.73,427.80,100.00,0,29.38,82.43,449.5,5
-RUN,cloudy_to_sunny,soil,combined_v4
+RUN,cloudy_to_sunny,soil,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 663.8 J   wasted (battery full): 503.2 J
@@ -21125,7 +21125,7 @@ RUN,cloudy_to_sunny,soil,combined_v4
   Battery: lowest 33.7 %    final 92.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,soil,combined_v4,13.125,3.611,246,75,101.62,663.82,503.22,100.00,0,33.72,92.55,60.0,5
+RESULT,cloudy_to_sunny,soil,triAS,13.125,3.611,246,75,101.62,663.82,503.22,100.00,0,33.72,92.55,60.0,5
 RUN,cloudy,soil,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=soil | method=fixed_rate | seed=5 ====
@@ -21159,9 +21159,9 @@ RUN,cloudy,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,soil,energy_only,31.412,18.175,651,82,162.17,173.59,0.00,100.00,0,29.38,58.75,449.5,5
-RUN,cloudy,soil,combined_v4
+RUN,cloudy,soil,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=soil | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=cloudy | signal=soil | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 184.1 J   wasted (battery full): 24.3 J
@@ -21169,7 +21169,7 @@ RUN,cloudy,soil,combined_v4
   Battery: lowest 33.7 %    final 92.0 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,soil,combined_v4,13.125,3.611,246,75,101.62,184.14,24.30,100.00,0,33.72,92.03,60.0,5
+RESULT,cloudy,soil,triAS,13.125,3.611,246,75,101.62,184.14,24.30,100.00,0,33.72,92.03,60.0,5
 SWEEP_DONE
 RUN,sunny,soil,fixed_rate
 
@@ -21204,9 +21204,9 @@ RUN,sunny,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny,soil,energy_only,31.354,18.178,974,88,210.69,1143.48,888.60,100.00,0,31.66,82.43,449.5,5
-RUN,sunny,soil,combined_v4
+RUN,sunny,soil,triAS
 
-==== RUN FINISHED: weather=sunny | signal=soil | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=sunny | signal=soil | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 1149.5 J   wasted (battery full): 988.9 J
@@ -21214,7 +21214,7 @@ RUN,sunny,soil,combined_v4
   Battery: lowest 34.7 %    final 92.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny,soil,combined_v4,13.125,3.611,246,75,101.62,1149.50,988.91,100.00,0,34.71,92.55,60.0,5
+RESULT,sunny,soil,triAS,13.125,3.611,246,75,101.62,1149.50,988.91,100.00,0,34.71,92.55,60.0,5
 RUN,sunny_to_cloudy,soil,fixed_rate
 
 ==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=fixed_rate | seed=5 ====
@@ -21248,9 +21248,9 @@ RUN,sunny_to_cloudy,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,sunny_to_cloudy,soil,energy_only,31.354,18.178,941,88,206.07,662.27,432.47,100.00,0,31.66,67.87,449.5,5
-RUN,sunny_to_cloudy,soil,combined_v4
+RUN,sunny_to_cloudy,soil,triAS
 
-==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=sunny_to_cloudy | signal=soil | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 670.1 J   wasted (battery full): 510.2 J
@@ -21258,7 +21258,7 @@ RUN,sunny_to_cloudy,soil,combined_v4
   Battery: lowest 34.7 %    final 92.0 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,sunny_to_cloudy,soil,combined_v4,13.125,3.611,246,75,101.62,670.06,510.24,100.00,0,34.71,92.03,60.0,5
+RESULT,sunny_to_cloudy,soil,triAS,13.125,3.611,246,75,101.62,670.06,510.24,100.00,0,34.71,92.03,60.0,5
 RUN,cloudy_to_sunny,soil,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=fixed_rate | seed=5 ====
@@ -21292,9 +21292,9 @@ RUN,cloudy_to_sunny,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy_to_sunny,soil,energy_only,31.412,18.172,794,83,182.74,654.73,427.80,100.00,0,29.38,82.43,449.5,5
-RUN,cloudy_to_sunny,soil,combined_v4
+RUN,cloudy_to_sunny,soil,triAS
 
-==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=cloudy_to_sunny | signal=soil | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 663.8 J   wasted (battery full): 503.2 J
@@ -21302,7 +21302,7 @@ RUN,cloudy_to_sunny,soil,combined_v4
   Battery: lowest 33.7 %    final 92.5 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy_to_sunny,soil,combined_v4,13.125,3.611,246,75,101.62,663.82,503.22,100.00,0,33.72,92.55,60.0,5
+RESULT,cloudy_to_sunny,soil,triAS,13.125,3.611,246,75,101.62,663.82,503.22,100.00,0,33.72,92.55,60.0,5
 RUN,cloudy,soil,fixed_rate
 
 ==== RUN FINISHED: weather=cloudy | signal=soil | method=fixed_rate | seed=5 ====
@@ -21336,9 +21336,9 @@ RUN,cloudy,soil,energy_only
   Longest time without data reaching the gateway: 449.5 min
   (next line = same numbers as CSV for collect_serial.py)
 RESULT,cloudy,soil,energy_only,31.412,18.175,651,82,162.17,173.59,0.00,100.00,0,29.38,58.75,449.5,5
-RUN,cloudy,soil,combined_v4
+RUN,cloudy,soil,triAS
 
-==== RUN FINISHED: weather=cloudy | signal=soil | method=combined_v4 | seed=5 ====
+==== RUN FINISHED: weather=cloudy | signal=soil | method=triAS | seed=5 ====
   Gateway reconstruction error (NRMSE): 13.13 %   (lower is better)
   Samples taken: 246 of 5760    Transmissions: 75
   Energy used by node: 101.6 J   harvested from sun: 184.1 J   wasted (battery full): 24.3 J
@@ -21346,5 +21346,5 @@ RUN,cloudy,soil,combined_v4
   Battery: lowest 33.7 %    final 92.0 %
   Longest time without data reaching the gateway: 60.0 min
   (next line = same numbers as CSV for collect_serial.py)
-RESULT,cloudy,soil,combined_v4,13.125,3.611,246,75,101.62,184.14,24.30,100.00,0,33.72,92.03,60.0,5
+RESULT,cloudy,soil,triAS,13.125,3.611,246,75,101.62,184.14,24.30,100.00,0,33.72,92.03,60.0,5
 SWEEP_DONE

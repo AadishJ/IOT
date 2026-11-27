@@ -11,7 +11,7 @@
  *      - the battery (10 mAh, 3.0-4.2 V, modelled as a 30 F capacitor)
  *      - the energy cost of every sample and transmission
  * Four algorithms run on the real readings and drain/charge the virtual
- * battery: 0 fixed_rate   1 signal_only   2 energy_only   3 combined_v4
+ * battery: 0 fixed_rate   1 signal_only   2 energy_only   3 triAS
  *
  * FAIR BENCHMARK = RECORD ONCE, REPLAY FOR EVERY RUN
  *      The real sensor is read live ONLY while recording (command c). The
@@ -25,15 +25,19 @@
  *
  * Serial commands (send one, press Enter):
  *      w0..w3  weather: 0 sunny, 1 sunny->cloudy, 2 cloudy->sunny, 3 cloudy
- *      m0..m3  method : 0 fixed_rate, 1 signal_only, 2 energy_only, 3
- * combined_v4 g0..g2  signal : 0 temperature, 1 humidity, 2 soil moisture
- * (discards any recorded trace) s<n>    weather random seed (default 1),
- * restarts the run c       RECORD the real sensor for one full run (prints
- * TRACE lines), then switch to replay r       restart the current run a sweep
- * ALL 16 (weather x method) combinations with the current seed (needs a
- * recorded trace) b       sweep all 16 combinations for seeds 1..N_SEEDS (needs
- * a recorded trace) h       help Output lines start with  RUN, LOG, RESULT,
- * TRACE  so a script can pick them out.
+ *      m0..m3  method: 0 fixed_rate, 1 signal_only, 2 energy_only, 3 triAS
+ *      g0..g2  signal: 0 temperature, 1 humidity, 2 soil moisture
+ *              (discards any recorded trace)
+ *      s<n>    weather random seed (default 1), restarts the run
+ *      c       RECORD the real sensor for one full run (prints TRACE lines),
+ *              then switch to replay
+ *      r       restart the current run
+ *      a       sweep all 16 (weather x method) combinations with current seed
+ *              (needs a recorded trace)
+ *      b       sweep all 16 combinations for seeds 1..N_SEEDS
+ *              (needs a recorded trace)
+ *      h       help
+ * Output lines start with RUN, LOG, RESULT, TRACE so a script can pick them out.
  *
  * Energy values are model numbers (joules of a 10 mAh cell), not measured on
  * the ESP.
@@ -81,7 +85,7 @@ const float SUNRISE = 6.5f, SUNSET = 17.5f;
 
 // policy parameters
 const int FIXED_INTERVAL = 10;
-const int MAX_STALE = 120; // combined_v4 mandatory row spacing
+const int MAX_STALE = 120; // triAS mandatory row spacing
 const float SOC_FLOOR = 0.15f, SOC_REF = 0.6f, TX_FRAC = 0.02f;
 const int MAX_INTERVAL = 30;
 const float U1 = 0.025f * 0.2f, U2 = 0.08f * 0.2f, U3 = 0.2f * 0.2f,
@@ -97,7 +101,7 @@ static int16_t refTrace[N]; // recorded real trace x100 (replayed for every run)
 const char *W_NAME[4] = {"sunny", "sunny_to_cloudy", "cloudy_to_sunny",
                          "cloudy"};
 const char *M_NAME[4] = {"fixed_rate", "signal_only", "energy_only",
-                         "combined_v4"};
+                         "triAS"};
 const char *G_NAME[3] = {"temperature", "humidity", "soil"};
 const bool W_SUNNY[4][2] = {
     {true, true}, {true, false}, {false, true}, {false, false}};
@@ -251,7 +255,7 @@ static bool policyStep(int i, float v, float t, float soc, bool &send) {
     nextIndex = i + interval;
     return true;
   }
-  // ---- combined_v4 (harvest-aware port of main.py) ----
+  // ---- triAS (harvest-aware port of main.py) ----
   bool mand = isMand(i);
   if (!mand && soc < SOC_FLOOR) {
     nextIndex = nxtMand(i);

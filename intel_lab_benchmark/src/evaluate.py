@@ -1,9 +1,9 @@
-"""Evaluate existing baselines and Combined V4.
+"""Evaluate existing baselines and triAS.
 
 Run from GPT/:
-python src/eval_v4.py --motes 3 10 \
+python src/evaluate.py --motes 3 10 \
     --variables temperature humidity light \
-    --out results/v4_2/motes3_10.csv
+    --out results/trias_2/motes3_10.csv
 """
 import argparse
 import sys
@@ -17,7 +17,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from IntelBerkeley.src.real_data import load_intel_data
 from IntelBerkeley.src.methods import fixed_rate, adaptive_policy
 from IntelBerkeley.src.evaluate_real import score
-from IntelBerkeley.src.main import combined_v4, verify_freshness
+from IntelBerkeley.src.main import triAS, verify_freshness
 
 
 def get_policies(df, params):
@@ -26,7 +26,7 @@ def get_policies(df, params):
         ("signal_only", adaptive_policy(df, "signal_only")),
         ("energy_only", adaptive_policy(df, "energy_only")),
         ("combined_v3", adaptive_policy(df, "combined")),
-        ("combined_v4", combined_v4(df, **params)),
+        ("triAS", triAS(df, **params)),
     ]
 
 
@@ -96,7 +96,7 @@ def get_diagnostics(trace, max_stale_rows=120, tx_cost=0.08,
             and abs(reported - remaining_energy) < 1e-6
         )
 
-    if n > 0 and trace["method"].iloc[0] == "combined_v4":
+    if n > 0 and trace["method"].iloc[0] == "triAS":
         result["freshness_guarantee_met"] = freshness_met
         result["freshness_feasible"] = trace.attrs.get(
             "freshness_feasible", None
@@ -115,7 +115,7 @@ def main():
     p.add_argument("--variables", nargs="+",
                    default=["temperature", "humidity", "light"])
     p.add_argument("--max-rows", type=int, default=20000)
-    p.add_argument("--out", default="results/v4_2/all_metrics.csv")
+    p.add_argument("--out", default="results/trias_2/all_metrics.csv")
     p.add_argument("--tx-frac", type=float, default=0.02)
     p.add_argument("--urg-scale", type=float, default=0.2)
     p.add_argument("--max-stale", type=int, default=120)
@@ -174,10 +174,12 @@ def main():
     print("\nAVERAGE RESULTS BY METHOD")
     print(res.groupby("method")[metrics].mean().round(3).to_string())
 
-    v4 = res[res["method"] == "combined_v4"]
-    if len(v4):
-        ok = int(v4["freshness_guarantee_met"].sum())
-        print(f"\nV4 freshness guarantee met on {ok}/{len(v4)} traces")
+    trias_results = res[res["method"] == "triAS"]
+    if len(trias_results):
+        ok = int(trias_results["freshness_guarantee_met"].sum())
+        print(
+            f"\ntriAS freshness guarantee met on {ok}/{len(trias_results)} traces"
+        )
     print(f"\nResults saved to: {out_path}")
 
 

@@ -16,7 +16,10 @@ parse : reads RESULT and TRACE lines from the raw log and writes
         trace_<signal>.csv     the recorded sensor trace (feed this to your Python sim)
 """
 
-import argparse, os, sys, time
+import argparse
+import os
+import sys
+import time
 
 COLS = [
     "weather",
@@ -145,7 +148,7 @@ def parse(a):
         pd.DataFrame(sorted(d.items()), columns=["tick", "value"]).to_csv(
             os.path.join(a.out, f"trace_{sig}.csv"), index=False
         )
-    order_m = ["fixed_rate", "signal_only", "energy_only", "combined_v4"]
+    order_m = ["fixed_rate", "signal_only", "energy_only", "triAS"]
     order_w = ["sunny", "sunny_to_cloudy", "cloudy_to_sunny", "cloudy"]
     pd.set_option("display.width", 200)
     for sig in df.signal.unique():

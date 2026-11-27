@@ -1,6 +1,6 @@
 # Intel Lab benchmark (firmware policies, four weather scenarios)
 
-Runs the four policies from the ESP8266 sketch (fixed_rate, signal_only, energy_only, combined_v4) on real
+Runs the four policies from the ESP8266 sketch (fixed_rate, signal_only, energy_only, triAS) on real
 Intel Lab traces, under the same solar/battery model as the hardware demo.
 
     pip install -r requirements.txt

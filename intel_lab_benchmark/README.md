@@ -12,7 +12,7 @@ This project investigates an adaptive sensing and communication strategy that ba
 - **Reconstruction accuracy:** preserve the quality of the signal reconstructed at the gateway.
 - **Data freshness:** ensure that the gateway receives updates within a specified maximum interval.
 
-The proposed approach, **Combined V4**, uses signal variability, prediction error, and the remaining energy budget to guide sensing and transmission decisions. It also reserves energy for mandatory transmissions to enforce a maximum transmission-gap constraint when the configured energy budget is sufficient.
+The proposed approach, **triAS**, uses signal variability, prediction error, and the remaining energy budget to guide sensing and transmission decisions. It also reserves energy for mandatory transmissions to enforce a maximum transmission-gap constraint when the configured energy budget is sufficient.
 
 The approach is evaluated against fixed-rate and adaptive baseline methods using the Intel Berkeley Research Lab sensor dataset.
 
@@ -30,9 +30,9 @@ The central research question is:
 
 > Can a combined adaptive sensing and communication policy reduce energy expenditure and communication overhead while maintaining acceptable gateway reconstruction accuracy and bounded data staleness?
 
-## Proposed approach: Combined V4
+## Proposed approach: triAS
 
-Combined V4 makes sensing and transmission decisions using information about the observed signal and the remaining energy budget.
+triAS makes sensing and transmission decisions using information about the observed signal and the remaining energy budget.
 
 ### 1. Signal variability
 
@@ -72,7 +72,7 @@ The evaluator compares five methods:
 | `signal_only` | Adaptive policy based on signal characteristics. |
 | `energy_only` | Adaptive policy based on energy considerations. |
 | `combined_v3` | Earlier combined adaptive policy. |
-| `combined_v4` | Combined policy with energy reservation and mandatory freshness scheduling. |
+| `triAS` | Combined policy with energy reservation and mandatory freshness scheduling. |
 
 All methods should be evaluated on the same sensor traces and with consistent metric definitions to enable a fair comparison.
 
@@ -236,7 +236,7 @@ GPT/
 
 ### Source file responsibilities
 
-- `src/main.py` — Combined V4 adaptive sensing and transmission policy, including mandatory transmission scheduling and freshness verification.
+- `src/main.py` — triAS adaptive sensing and transmission policy, including mandatory transmission scheduling and freshness verification.
 - `src/evaluate.py` — runs the baseline comparison and writes the evaluation metrics.
 - `src/evaluate_real.py` — computes reconstruction and other evaluation metrics.
 - `src/methods.py` — contains the baseline sampling and transmission policies.
@@ -331,7 +331,7 @@ No single metric is sufficient to establish that a method is best overall:
 
 - Fixed-rate sampling may provide better reconstruction accuracy while consuming more energy.
 - Aggressive adaptive policies may reduce energy use but introduce larger reconstruction errors or freshness violations.
-- Combined V4 is designed to balance signal-dependent decisions with a reserved energy budget for mandatory transmissions.
+- triAS is designed to balance signal-dependent decisions with a reserved energy budget for mandatory transmissions.
 
 The most appropriate method depends on the application's constraints. When the freshness bound and energy budget are mandatory, methods that violate either constraint should not be considered feasible solutions under that configuration.
 

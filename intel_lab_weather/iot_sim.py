@@ -4,7 +4,7 @@ iot_sim.py - Python port of the firmware's simulator and policies (main.cpp), li
 Same model as the ESP8266 hardware-in-the-loop sketch:
   * virtual 10 mAh battery (3.0-4.2 V) = 30 F capacitor, charged by a solar panel (ISC x irradiance)
   * energy cost per sample / per transmission, plus sleep power
-  * four policies: fixed_rate, signal_only, energy_only, combined_v4
+  * four policies: fixed_rate, signal_only, energy_only, triAS
   * gateway reconstruction by linear interpolation between transmitted samples -> NRMSE / NMAE
 All constants are in Cfg (defaults = the firmware's), so sensitivity sweeps are one keyword away.
 
@@ -16,7 +16,7 @@ from dataclasses import dataclass, replace
 
 import numpy as np
 
-METHODS = ["fixed_rate", "signal_only", "energy_only", "combined_v4"]
+METHODS = ["fixed_rate", "signal_only", "energy_only", "triAS"]
 WEATHERS = ["sunny", "sunny_to_cloudy", "cloudy_to_sunny", "cloudy"]
 _W_SUNNY = {0: (True, True), 1: (True, False), 2: (False, True), 3: (False, False)}
 
@@ -37,7 +37,7 @@ class Cfg:
     sunrise: float = 6.5
     sunset: float = 17.5
     fixed_interval: int = 10
-    max_stale: int = 120        # combined_v4 mandatory row spacing
+    max_stale: int = 120        # triAS mandatory row spacing
     soc_floor: float = 0.15
     soc_ref: float = 0.6
     tx_frac: float = 0.02
@@ -184,7 +184,7 @@ class EnergyOnly(_Base):
         return True, bool(send)
 
 
-class CombinedV4(_Base):
+class TriAS(_Base):
     def __init__(self, n, c):
         super().__init__(n, c)
         self.have_lh = False
@@ -270,7 +270,7 @@ class CombinedV4(_Base):
 
 
 POLICIES = {"fixed_rate": FixedRate, "signal_only": SignalOnly,
-            "energy_only": EnergyOnly, "combined_v4": CombinedV4}
+            "energy_only": EnergyOnly, "triAS": TriAS}
 
 
 # ------------------------------------------------------------------ one run
